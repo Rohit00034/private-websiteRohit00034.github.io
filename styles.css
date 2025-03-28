@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222; /* Dark grey background */
-    color: white; /* White text */
+    background-color: white; /* White background for the page */
+    color: black; /* Default text color */
 }
 
 /* Header Styles */
 header {
     background-color: #222; /* Dark grey */
+    color: white; /* White text */
     padding: 50px 20px;
     text-align: left; /* Align content to the left */
 }
