@@ -1,26 +1,32 @@
-/* Apply general styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #222; /* Dark grey background */
+    color: white; /* White text */
 }
 
-/* Style the header */
+/* Header Styles */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #222; /* Dark grey */
     padding: 50px 20px;
+    text-align: left; /* Align content to the left */
 }
 
-/* Style the name */
+/* Name Styling */
 header h1 {
     font-size: 3rem;
     margin: 0;
+    font-weight: normal; /* Default weight */
 }
 
-/* Style the course */
+/* Make Firstname Bold */
+header h1 span.firstname {
+    font-weight: bold;
+}
+
+/* Course Styling */
 header p {
     font-size: 1.5rem;
     margin: 10px 0 0;
