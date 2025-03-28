@@ -11,7 +11,7 @@ body {
 header {
     background-color: #222; /* Dark grey */
     color: white; /* White text */
-    padding: 38px 20px; /* Reduced height (3/4 of previous 50px) */
+    padding: 25px 20px; /* Reduced height to half (previously 50px) */
     text-align: left; /* Align content to the left */
 }
 
