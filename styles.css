@@ -1,0 +1,27 @@
+/* Apply general styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+}
+
+/* Style the name */
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Style the course */
+header p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
