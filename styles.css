@@ -1,34 +1,73 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: white; /* White background for the page */
-    color: black; /* Default text color */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Header Styles */
-header {
-    background-color: #222; /* Dark grey */
-    color: white; /* White text */
-    padding: 25px 20px; /* Reduced height to half (previously 50px) */
-    text-align: left; /* Align content to the left */
+/* Cover Page (Header) */
+#cover {
+    background-color: #222; /* Dark Grey */
+    color: white;
+    padding: 40px;
+    text-align: left;
+    width: 100%;
 }
 
-/* Name Styling */
-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    font-weight: normal; /* Default weight */
+#cover h1 {
+    font-size: 36px;
 }
 
-/* Make Firstname Bold */
-header h1 span.firstname {
+#cover .firstname {
     font-weight: bold;
 }
 
-/* Course Styling */
-header p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
+#cover p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Alternate Backgrounds for Sections */
+#toc, #email-marketing, #contact {
+    background-color: #f4f4f4; /* Light Grey */
+}
+
+/* Table of Contents */
+#toc ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#toc ul li {
+    padding: 8px 0;
+}
+
+#toc ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact a {
+    font-weight: bold;
 }
