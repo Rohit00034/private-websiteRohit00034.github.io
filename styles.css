@@ -8,7 +8,7 @@
 }
 
 /* Cover Page (Header) */
-#cover {
+#cover, #contact {
     background-color: #222; /* Dark Grey */
     color: white;
     padding: 40px;
@@ -16,16 +16,16 @@
     width: 100%;
 }
 
-#cover h1 {
+#cover h1, #contact h1 {
     font-size: 36px;
 }
 
-#cover .firstname {
+#cover .firstname, #contact .firstname {
     font-weight: bold;
     color: #007bff; /* Blue Accent */
 }
 
-#cover p {
+#cover p, #contact p {
     font-size: 20px;
     margin-top: 5px;
 }
