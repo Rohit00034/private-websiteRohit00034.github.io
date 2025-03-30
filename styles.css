@@ -100,3 +100,10 @@ a:hover {
 #contact a {
     font-weight: bold;
 }
+body {
+    background-image: url('images/portfolioimage.jpg'); /* Use correct filename */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
