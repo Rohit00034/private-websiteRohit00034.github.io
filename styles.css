@@ -114,11 +114,3 @@ section {
 section:hover {
     transform: scale(1.02); /* Slightly enlarge on hover */
 }
-/* Apply black stroke to all blue text except contact and header */
-section h2, #toc ul li a {
-    text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,  
-        -1px  1px 0 black,  
-         1px  1px 0 black; /* Creates a black outline effect */
-}
