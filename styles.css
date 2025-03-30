@@ -50,6 +50,11 @@ section h2 {
 }
 
 /* Table of Contents */
+#toc h2 {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
 #toc ul {
     list-style-type: none;
     padding: 10px;
