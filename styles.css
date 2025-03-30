@@ -32,14 +32,19 @@
 
 /* Section Styling */
 section {
+    background-image: url('images/jeremy-bishop-G9i_plbfDgk-unsplash.jpg'); /* Change to your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Ensures text is visible on dark images */
     padding: 50px 20px;
     max-width: 900px;
     margin: 0 auto;
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
+
 
 /* Section Titles */
 section h2 {
