@@ -22,6 +22,7 @@
 
 #cover .firstname {
     font-weight: bold;
+    color: #007bff; /* Blue Accent */
 }
 
 #cover p {
@@ -34,11 +35,18 @@ section {
     padding: 50px 20px;
     max-width: 900px;
     margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-/* Alternate Backgrounds for Sections */
-#toc, #email-marketing, #contact {
-    background-color: #f4f4f4; /* Light Grey */
+/* Section Titles */
+section h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /* Table of Contents */
@@ -53,18 +61,34 @@ section {
 
 #toc ul li a {
     text-decoration: none;
-    color: #333;
+    color: #007bff;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+#toc ul li a:hover {
+    color: #0056b3;
+}
+
+/* Divider Styling */
+.divider {
+    border: none;
+    height: 2px;
+    background: #007bff;
+    margin: 40px auto;
+    width: 80%;
 }
 
 /* Links */
 a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3;
 }
 
 /* Contact Section */
