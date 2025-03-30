@@ -107,3 +107,10 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+section {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+section:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
