@@ -1,124 +1,92 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Page Navigation Variables
-    const pages = document.querySelectorAll('.page');
-    const totalPages = pages.length;
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const pageIndicator = document.getElementById('page-indicator');
-    let currentPage = 0;
-
-    // Section Navigation Variables
-    const tocItems = document.querySelectorAll('.toc-item');
-    const sectionPages = document.querySelectorAll('.section-page');
-    const backButtons = document.querySelectorAll('.back-button');
-
-    // Initialize page indicators
-    for (let i = 0; i < totalPages; i++) {
-        const indicator = document.createElement('div');
-        indicator.classList.add('indicator');
-        if (i === 0) {
-            indicator.classList.add('active');
-        }
-        indicator.addEventListener('click', () => goToPage(i));
-        pageIndicator.appendChild(indicator);
-    }
-
-    // Initialize first page
-    pages[0].classList.add('active');
-
-    // Navigation functions
-    function goToPage(pageIndex) {
-        if (pageIndex < 0 || pageIndex >= totalPages) return;
-
-        // First disable any active section pages
-        sectionPages.forEach(page => page.classList.remove('active'));
-        
-        // Then change the main page
-        pages[currentPage].classList.remove('active');
-        document.querySelectorAll('.indicator')[currentPage].classList.remove('active');
-        
-        currentPage = pageIndex;
-        
-        pages[currentPage].classList.add('active');
-        document.querySelectorAll('.indicator')[currentPage].classList.add('active');
-    }
-
-    function nextPage() {
-        goToPage(currentPage + 1);
-    }
-
-    function prevPage() {
-        goToPage(currentPage - 1);
-    }
-
-    // Event listeners for navigation
-    prevBtn.addEventListener('click', prevPage);
-    nextBtn.addEventListener('click', nextPage);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
-            nextPage();
-        } else if (e.key === 'ArrowLeft') {
-            prevPage();
-        }
-    });
-
-    // Disable wheel navigation to fix scrolling issues
-    // Instead, only use button/indicator navigation
-
-    // Section navigation - Fixed to properly navigate to the sections page first
-    tocItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const sectionId = this.getAttribute('data-section');
-            const section = document.getElementById(sectionId);
+    // Smooth scrolling for navigation
+    document.querySelectorAll('.navigation a, .toc-item').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
             
-            // First, go to the sections page (index 3)
-            goToPage(3);
-            
-            // Then show the selected section after a small delay to ensure page transition is complete
-            setTimeout(() => {
-                // Hide all sections first
-                sectionPages.forEach(page => page.classList.remove('active'));
+            // Get the target section
+            let targetId;
+            if (this.classList.contains('toc-item')) {
+                // For TOC items, navigate to sections and activate the correct subsection
+                targetId = 'sections';
+                const subsectionId = this.getAttribute('data-section');
                 
-                // Show the selected section
-                section.classList.add('active');
-            }, 100);
-        });
-    });
-
-    // Back button functionality - Fixed to properly return to the TOC page
-    backButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            sectionPages.forEach(page => page.classList.remove('active'));
-            // Go back to the TOC page
-            goToPage(2);
-        });
-    });
-
-    // Add loading animation
-    window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-    });
-
-    // Add hover effects with JavaScript for better mobile support
-    const hoverElements = document.querySelectorAll('.toc-item, .work-item, .contact-item');
-    
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
-            if (this.classList.contains('toc-item')) {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                // Wait for scroll to complete, then activate the correct subsection
+                setTimeout(() => {
+                    activateSubsection(subsectionId);
+                }, 1000);
+            } else {
+                // For regular nav items
+                targetId = this.getAttribute('href').substring(1);
             }
+            
+            const targetElement = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Subsection navigation
+    document.querySelectorAll('.subsection-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            activateSubsection(sectionId);
+        });
+    });
+    
+    // Function to activate the correct subsection
+    function activateSubsection(sectionId) {
+        // Remove active class from all buttons and sections
+        document.querySelectorAll('.subsection-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
         
-        element.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-            this.style.boxShadow = 'none';
-            if (this.classList.contains('toc-item')) {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        document.querySelectorAll('.subsection').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Add active class to selected button and section
+        document.querySelector(`.subsection-btn[data-section="${sectionId}"]`).classList.add('active');
+        document.getElementById(sectionId).classList.add('active');
+    }
+    
+    // Add scroll animation for elements
+    window.addEventListener('scroll', revealOnScroll);
+    
+    function revealOnScroll() {
+        const contentBoxes = document.querySelectorAll('.content-box');
+        
+        contentBoxes.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (boxTop < windowHeight - 100) {
+                box.style.opacity = '1';
+                box.style.transform = 'translateY(0)';
             }
         });
+    }
+    
+    // Initialize the opacity for content boxes
+    document.querySelectorAll('.content-box').forEach(box => {
+        box.style.opacity = '0';
+        box.style.transform = 'translateY(50px)';
+        box.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
+    
+    // Trigger initial reveal
+    revealOnScroll();
+    
+    // Form submission (prevent default for demonstration)
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submission functionality would be implemented here.');
+            this.reset();
+        });
+    }
 });
