@@ -7,12 +7,19 @@
 }
 
 body {
+    /* Default background, can be overridden by custom background */
     background-image: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     color: #fff;
     overflow: hidden;
+}
+
+/* To use a custom background, add a class 'custom-bg' to the body 
+   and set your image path in the following CSS property */
+body.custom-bg {
+    background-image: url('your-custom-image.jpg'); /* Replace with your image path */
 }
 
 body::before {
@@ -46,12 +53,14 @@ body::before {
     opacity: 0;
     transform: translateY(100%);
     z-index: 1;
+    visibility: hidden; /* Hide by default */
 }
 
 .page.active {
     opacity: 1;
     transform: translateY(0);
     z-index: 5;
+    visibility: visible; /* Show when active */
 }
 
 h1, h2, h3 {
@@ -180,6 +189,8 @@ blockquote::after {
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 10;
+    overflow-y: auto; /* Add scrolling for content that doesn't fit */
+    padding-bottom: 80px; /* Space for the back button */
 }
 
 .section-page.active {
@@ -214,6 +225,7 @@ blockquote::after {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
+    display: inline-block; /* Ensure the button is properly displayed */
 }
 
 .back-button:hover {
@@ -251,56 +263,6 @@ blockquote::after {
     color: #64ffda;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 4px;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #64ffda;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.submit-btn {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-}
-
-.submit-btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
 /* Navigation */
 .navigation {
     position: fixed;
@@ -310,6 +272,9 @@ textarea {
     display: flex;
     align-items: center;
     z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
 }
 
 #prev-btn, #next-btn {
@@ -340,6 +305,7 @@ textarea {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 .indicator.active {

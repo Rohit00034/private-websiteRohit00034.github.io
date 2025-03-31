@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tocItems = document.querySelectorAll('.toc-item');
     const sectionPages = document.querySelectorAll('.section-page');
     const backButtons = document.querySelectorAll('.back-button');
-    const contactForm = document.getElementById('contactForm');
 
     // Initialize page indicators
     for (let i = 0; i < totalPages; i++) {
@@ -31,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function goToPage(pageIndex) {
         if (pageIndex < 0 || pageIndex >= totalPages) return;
 
+        // First disable any active section pages
+        sectionPages.forEach(page => page.classList.remove('active'));
+        
+        // Then change the main page
         pages[currentPage].classList.remove('active');
         document.querySelectorAll('.indicator')[currentPage].classList.remove('active');
         
@@ -61,61 +64,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Wheel navigation (with debounce to prevent rapid scrolling)
-    let wheelTimer;
-    document.addEventListener('wheel', function(e) {
-        clearTimeout(wheelTimer);
-        wheelTimer = setTimeout(() => {
-            if (e.deltaY > 0) {
-                nextPage();
-            } else {
-                prevPage();
-            }
-        }, 100);
-    });
+    // Disable wheel navigation to fix scrolling issues
+    // Instead, only use button/indicator navigation
 
-    // Section navigation
+    // Section navigation - Fixed to properly navigate to the sections page first
     tocItems.forEach(item => {
         item.addEventListener('click', function() {
             const sectionId = this.getAttribute('data-section');
             const section = document.getElementById(sectionId);
             
-            // Hide all sections first
-            sectionPages.forEach(page => page.classList.remove('active'));
+            // First, go to the sections page (index 3)
+            goToPage(3);
             
-            // Show the selected section
-            section.classList.add('active');
+            // Then show the selected section after a small delay to ensure page transition is complete
+            setTimeout(() => {
+                // Hide all sections first
+                sectionPages.forEach(page => page.classList.remove('active'));
+                
+                // Show the selected section
+                section.classList.add('active');
+            }, 100);
         });
     });
 
-    // Back button functionality
+    // Back button functionality - Fixed to properly return to the TOC page
     backButtons.forEach(button => {
         button.addEventListener('click', function() {
             sectionPages.forEach(page => page.classList.remove('active'));
+            // Go back to the TOC page
+            goToPage(2);
         });
     });
-
-    // Contact form submission (prevent default form submission)
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send this data to a server
-            // But for GitHub Pages, you might want to use a service like Formspree
-            console.log('Form submission:', { name, email, message });
-            
-            // Show a thank you message (in a real app)
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset the form
-            contactForm.reset();
-        });
-    }
 
     // Add loading animation
     window.addEventListener('load', function() {
