@@ -3,16 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Digital Marketing Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Page 1: Cover Page -->
+    <section id="cover" class="page">
+        <div class="container">
+            <h1 class="name">Your Name</h1>
+            <h2 class="course">Digital Marketing Specialist</h2>
+            <div class="scroll-down">
+                <p>Scroll Down</p>
+                <div class="arrow">&#8595;</div>
+            </div>
+        </div>
+    </section>
 
-    <header>
-        <h1><span class="firstname">Firstname</span> Secondname</h1>
-        <p>Your Course</p>
-    </header>
+    <!-- Page 2: Intro Page -->
+    <section id="intro" class="page">
+        <div class="container">
+            <div class="quote-container">
+                <blockquote>
+                    "Digital marketing isn't just about reaching an audience; it's about creating meaningful connections that convert viewers into loyal customers."
+                </blockquote>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Page 3: Table of Contents -->
+    <section id="toc" class="page">
+        <div class="container">
+            <h2>Portfolio Contents</h2>
+            <div class="toc-grid">
+                <div class="toc-item" data-section="content">
+                    <h3>Content Marketing</h3>
+                    <p>Storytelling through various media formats</p>
+                </div>
+                <div class="toc-item" data-section="social">
+                    <h3>Social Media Marketing</h3>
+                    <p>Building brands across platforms</p>
+                </div>
+                <div class="toc-item" data-section="affiliate">
+                    <h3>Affiliate Marketing</h3>
+                    <p>Creating valuable partnerships</p>
+                </div>
+                <div class="toc-item" data-section="email">
+                    <h3>Email Marketing</h3>
+                    <p>Nurturing leads through personalized communication</p>
+                </div>
+                <div class="toc-item" data-section="mobile">
+                    <h3>Mobile Marketing</h3>
+                    <p>Reaching audiences on the go</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4: Sections with subpages -->
+    <section id="sections" class="page">
+        <!-- Content Marketing Section -->
+        <div id="content" class="section-page">
+            <div class="container">
+                <h2>Content Marketing</h2>
+                <div class="content-grid">
+                    <div class="work-item">
+                        <h3>Blogging</h3>
+                        <p>Description of your blog work, topics covered, and impact achieved.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Articles</h3>
+                        <p>Featured publications, guest posts, and thought leadership pieces.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Storytelling</h3>
+                        <p>Creative narratives crafted for brands and campaigns.</p>
+                    </div>
+                </div>
+                <button class="back-button">Back to Contents</button>
+            </div>
+        </div>
+
+        <!-- Social Media Marketing Section -->
+        <div id="social" class="section-page">
+            <div class="container">
+                <h2>Social Media Marketing</h2>
+                <div class="content-grid">
+                    <div class="work-item">
+                        <h3>Campaign Management</h3>
+                        <p>Successful social media campaigns planned and executed.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Community Building</h3>
+                        <p>Growth strategies and engagement techniques implemented.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Content Creation</h3>
+                        <p>Platform-specific content designed to maximize engagement.</p>
+                    </div>
+                </div>
+                <button class="back-button">Back to Contents</button>
+            </div>
+        </div>
+
+        <!-- Affiliate Marketing Section -->
+        <div id="affiliate" class="section-page">
+            <div class="container">
+                <h2>Affiliate Marketing</h2>
+                <div class="content-grid">
+                    <div class="work-item">
+                        <h3>Partnership Programs</h3>
+                        <p>Successful affiliate relationships cultivated and managed.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Revenue Generation</h3>
+                        <p>Conversion strategies and performance metrics achieved.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Product Promotion</h3>
+                        <p>Authentic endorsements and recommendation tactics.</p>
+                    </div>
+                </div>
+                <button class="back-button">Back to Contents</button>
+            </div>
+        </div>
+
+        <!-- Email Marketing Section -->
+        <div id="email" class="section-page">
+            <div class="container">
+                <h2>Email Marketing</h2>
+                <div class="content-grid">
+                    <div class="work-item">
+                        <h3>Campaign Strategy</h3>
+                        <p>Email sequences and automation workflows developed.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Content Writing</h3>
+                        <p>Engaging subject lines and persuasive copy examples.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Analytics & Optimization</h3>
+                        <p>Performance tracking and iterative improvements.</p>
+                    </div>
+                </div>
+                <button class="back-button">Back to Contents</button>
+            </div>
+        </div>
+
+        <!-- Mobile Marketing Section -->
+        <div id="mobile" class="section-page">
+            <div class="container">
+                <h2>Mobile Marketing</h2>
+                <div class="content-grid">
+                    <div class="work-item">
+                        <h3>App Marketing</h3>
+                        <p>Strategies for increasing downloads and user engagement.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>SMS Campaigns</h3>
+                        <p>Direct messaging approaches with high conversion rates.</p>
+                    </div>
+                    <div class="work-item">
+                        <h3>Location-Based Marketing</h3>
+                        <p>Geotargeting initiatives to reach local audiences.</p>
+                    </div>
+                </div>
+                <button class="back-button">Back to Contents</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5: Contact Slide -->
+    <section id="contact" class="page">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="navigation">
+        <button id="prev-btn">&lt;</button>
+        <div id="page-indicator"></div>
+        <button id="next-btn">&gt;</button>
+    </div>
 </body>
 </html>
