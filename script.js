@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const backgroundImages = {
         'cover-bg': 'images/IMG_3563.JPG',
         'intro-bg': 'images/portfolioimage.jpg',
-        'about-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'about-bg': 'images/IMG_3563.JPG',
         'contents-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg',
-        'sections-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'sections-bg': 'images/IMG_3563.JPG',
         'contact-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg'
     };
     
