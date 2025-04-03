@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set background images for each page
     const backgroundImages = {
         'cover-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
-        'intro-bg': 'images/portfolioimage',
+        'intro-bg': 'images/portfolioimage.jpg',
         'about-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
-        'contents-bg': 'images/david-becker-mGx5-xt1uec-unsplash',
+        'contents-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg',
         'sections-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
-        'contact-bg': 'images/david-becker-mGx5-xt1uec-unsplash'
+        'contact-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg'
     };
     
     // Apply background images to each section
