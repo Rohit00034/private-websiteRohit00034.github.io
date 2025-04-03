@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set background images for each page
     const backgroundImages = {
         'cover-bg': 'images/IMG_3563.JPG',
-        'intro-bg': 'images/IMG_3566.JPG',
+        'intro-bg': 'images/IMG_3564.JPG',
         'about-bg': 'images/IMG_3563.JPG',
-        'contents-bg': 'images/IMG_3566.JPG',
+        'contents-bg': 'images/IMG_3564.JPG',
         'sections-bg': 'images/IMG_3563.JPG',
-        'contact-bg': 'images/IMG_3566.JPG'
+        'contact-bg': 'images/IMG_3564.JPG'
     };
     
     // Apply background images to each section
