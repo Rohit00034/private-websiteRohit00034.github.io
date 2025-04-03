@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Set background images for each page
     const backgroundImages = {
-        'cover-bg': 'images/IMG_3563.jpg',
+        'cover-bg': 'images/IMG_3563.JPG',
         'intro-bg': 'images/portfolioimage.jpg',
         'about-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
         'contents-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg',
