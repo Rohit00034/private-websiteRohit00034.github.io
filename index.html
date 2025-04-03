@@ -12,17 +12,18 @@
         <ul>
             <li><a href="#cover">Home</a></li>
             <li><a href="#intro">Intro</a></li>
+            <li><a href="#about">About Me</a></li>
             <li><a href="#contents">Contents</a></li>
             <li><a href="#sections">Sections</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
-
+    
     <!-- Page 1: Cover Page -->
-    <section id="cover" class="page">
+    <section id="cover" class="page" data-bg="cover-bg">
         <div class="container">
             <div class="content-box">
-                <h1 class="name">Diya Soni</h1>
+                <h1 class="name">Your Name</h1>
                 <h2 class="course">Digital Marketing Specialist</h2>
                 <div class="scroll-down">
                     <p>Scroll Down</p>
@@ -31,9 +32,9 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Page 2: Intro Page -->
-    <section id="intro" class="page">
+    <section id="intro" class="page" data-bg="intro-bg">
         <div class="container">
             <div class="content-box">
                 <h2>My Philosophy</h2>
@@ -46,8 +47,44 @@
         </div>
     </section>
 
-    <!-- Page 3: Table of Contents -->
-    <section id="contents" class="page">
+    <!-- Page 3: About Me Page -->
+    <section id="about" class="page" data-bg="about-bg">
+        <div class="container">
+            <div class="content-box">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/profile-placeholder.jpg" alt="Your Profile Picture">
+                    </div>
+                    <div class="about-text">
+                        <h3>My Journey</h3>
+                        <div class="about-section">
+                            <h4>Education</h4>
+                            <div class="education-item">
+                                <h5>Current Education</h5>
+                                <p>Details about your current education and program.</p>
+                            </div>
+                            <div class="education-item">
+                                <h5>Previous Education</h5>
+                                <p>Details about your schooling and previous academic background.</p>
+                            </div>
+                        </div>
+                        <div class="about-section">
+                            <h4>Professional Background</h4>
+                            <p>Information about your professional journey, experiences, and growth in the digital marketing field.</p>
+                        </div>
+                        <div class="about-section">
+                            <h4>Skills & Expertise</h4>
+                            <p>Details about your key skills, certifications, and areas of expertise.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Page 4: Table of Contents -->
+    <section id="contents" class="page" data-bg="contents-bg">
         <div class="container">
             <div class="content-box">
                 <h2>Table of Contents</h2>
@@ -68,17 +105,13 @@
                         <h3>Email Marketing</h3>
                         <p>Campaigns and analytics</p>
                     </div>
-                    <div class="toc-item" data-section="mobile">
-                        <h3>Mobile Marketing</h3>
-                        <p>Strategies and innovations</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Page 4: Sections -->
-    <section id="sections" class="page">
+    <!-- Page 5: Sections -->
+    <section id="sections" class="page" data-bg="sections-bg">
         <div class="container">
             <div class="content-box">
                 <h2>My Work</h2>
@@ -89,7 +122,6 @@
                     <button class="subsection-btn" data-section="social-media">Social Media</button>
                     <button class="subsection-btn" data-section="affiliate">Affiliate</button>
                     <button class="subsection-btn" data-section="email">Email</button>
-                    <button class="subsection-btn" data-section="mobile">Mobile</button>
                 </div>
 
                 <!-- Subsections -->
@@ -101,12 +133,18 @@
                             <div class="work-item">
                                 <div class="work-image" style="background-image: url('images/jeremy-bishop-G9i_plbfDgk-unsplash.jpg'); background-size: cover;"></div>
                                 <h4>Blog Series: Digital Transformation</h4>
-                                <p>A comprehensive analysis of how businesses adapted to digital platforms post-pandemic.dhfbsjhdbfsjbdfhsjdfjshdfhjsdvfjhsvdfjvhsjdfvjshfjshdvfjhsvfjhsvdhfvsjhdvfhjsvdfjsvhdjfvsjhdvfhvshdbcshbdcbshjvjshjbvhjbsjhdbvjhsbcjhbjhsbdhjvbshjdbvjhsbdvhbshdjbvjsbdvsbvjhbsjdbvhbsdbvjhbsdjhbvhbshdjbfjhsbdhjbvhjbshdjbvhsbhdbvhbshdvhjsdvbjsdbvhjsvjhsbjvdbvhbhsdbvjshbvjhdvbjhsbdv</p>
+                                <div class="work-description">
+                                    <p>A comprehensive analysis of how businesses adapted to digital platforms post-pandemic.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Storytelling Campaign: Brand Journey</h4>
-                                <p>Created a narrative series highlighting client success stories and brand evolution.</p>
+                                <div class="work-description">
+                                    <p>Created a narrative series highlighting client success stories and brand evolution.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -118,12 +156,18 @@
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Instagram Growth Strategy</h4>
-                                <p>Increased client following by 200% through targeted content and engagement strategies.</p>
+                                <div class="work-description">
+                                    <p>Increased client following by 200% through targeted content and engagement strategies.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>LinkedIn B2B Campaign</h4>
-                                <p>Developed corporate branding strategy resulting in 150% increase in qualified leads.</p>
+                                <div class="work-description">
+                                    <p>Developed corporate branding strategy resulting in 150% increase in qualified leads.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,12 +179,18 @@
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Product Partnership Program</h4>
-                                <p>Established affiliate relationships with complementary product lines, increasing revenue streams.</p>
+                                <div class="work-description">
+                                    <p>Established affiliate relationships with complementary product lines, increasing revenue streams.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Influencer Collaboration Campaign</h4>
-                                <p>Coordinated with micro-influencers to authentically promote client products to targeted audiences.</p>
+                                <div class="work-description">
+                                    <p>Coordinated with micro-influencers to authentically promote client products to targeted audiences.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,29 +202,18 @@
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Automated Nurture Sequence</h4>
-                                <p>Designed a 7-email sequence that converted at 15% higher than industry average.</p>
+                                <div class="work-description">
+                                    <p>Designed a 7-email sequence that converted at 15% higher than industry average.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                             <div class="work-item">
                                 <div class="work-image placeholder"></div>
                                 <h4>Segmentation Strategy</h4>
-                                <p>Implemented behavioral segmentation resulting in 35% higher engagement rates.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Marketing -->
-                    <div class="subsection" id="mobile">
-                        <h3>Mobile Marketing</h3>
-                        <div class="work-items">
-                            <div class="work-item">
-                                <div class="work-image placeholder"></div>
-                                <h4>SMS Campaign Strategy</h4>
-                                <p>Developed a consent-based SMS marketing program with 98% deliverability and 45% interaction.</p>
-                            </div>
-                            <div class="work-item">
-                                <div class="work-image placeholder"></div>
-                                <h4>In-App Marketing Integration</h4>
-                                <p>Strategized in-app promotional content that increased user retention by 27%.</p>
+                                <div class="work-description">
+                                    <p>Implemented behavioral segmentation resulting in 35% higher engagement rates.</p>
+                                    <!-- Add more paragraphs as needed -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -183,8 +222,8 @@
         </div>
     </section>
 
-    <!-- Page 5: Contact -->
-    <section id="contact" class="page">
+    <!-- Page 6: Contact -->
+    <section id="contact" class="page" data-bg="contact-bg">
         <div class="container">
             <div class="content-box">
                 <h2>Get In Touch</h2>

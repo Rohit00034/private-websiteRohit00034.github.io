@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Set background images for each page
+    const backgroundImages = {
+        'cover-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'intro-bg': 'images/intro-background.jpg',
+        'about-bg': 'images/about-background.jpg',
+        'contents-bg': 'images/contents-background.jpg',
+        'sections-bg': 'images/sections-background.jpg',
+        'contact-bg': 'images/contact-background.jpg'
+    };
+    
+    // Apply background images to each section
+    document.querySelectorAll('.page').forEach(page => {
+        const bgKey = page.getAttribute('data-bg');
+        if (bgKey && backgroundImages[bgKey]) {
+            page.style.backgroundImage = `url('${backgroundImages[bgKey]}')`;
+        }
+    });
+    
     // Smooth scrolling for navigation
     document.querySelectorAll('.navigation a, .toc-item').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

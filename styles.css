@@ -7,23 +7,8 @@
 }
 
 body {
-    background-image: url('images/ryan-kim-ADvoB9pDkow-unsplash.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     color: #fff;
     position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 30, 0.8); /* Dark blue overlay */
-    z-index: -1;
 }
 
 .navigation {
@@ -64,6 +49,14 @@ body::before {
     justify-content: center;
     padding: 80px 20px; /* Extra padding for the fixed navbar */
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Default background for pages (will be overridden by JS) */
+.page {
+    background-image: url('images/ryan-kim-ADvoB9pDkow-unsplash.jpg');
 }
 
 .container {
@@ -85,7 +78,7 @@ body::before {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin-bottom: 20px;
     color: #3498db;
 }
@@ -106,6 +99,11 @@ h3 {
 
 h4 {
     font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    color: #2980b9;
 }
 
 p {
@@ -184,6 +182,49 @@ p {
     right: 10px;
     color: #3498db;
     font-size: 2rem;
+}
+
+/* About Me Page Styles */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3498db;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.about-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.education-item {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #3498db;
 }
 
 /* Table of Contents Styles */
@@ -294,16 +335,21 @@ p {
     color: #666;
 }
 
-.work-item h4, .work-item p {
-    padding: 0 15px;
-}
-
 .work-item h4 {
-    margin-top: 15px;
+    padding: 15px 15px 5px;
+    margin-top: 0;
 }
 
-.work-item p {
+.work-description {
+    padding: 0 15px 15px;
+}
+
+.work-description p {
     margin-bottom: 15px;
+}
+
+.work-description p:last-child {
+    margin-bottom: 0;
 }
 
 /* Contact Page Styles */
@@ -404,5 +450,29 @@ button[type="submit"]:hover {
     
     .content-box {
         padding: 20px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .about-image {
+        flex-shrink: 0;
+    }
+    
+    .about-text {
+        margin-left: 30px;
     }
 }
