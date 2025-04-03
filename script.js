@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set background images for each page
     const backgroundImages = {
         'cover-bg': 'images/IMG_3563.JPG',
-        'intro-bg': 'images/portfolioimage.jpg',
+        'intro-bg': 'images/IMG_3566.JPG',
         'about-bg': 'images/IMG_3563.JPG',
-        'contents-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg',
+        'contents-bg': 'images/IMG_3566.JPG',
         'sections-bg': 'images/IMG_3563.JPG',
-        'contact-bg': 'images/david-becker-mGx5-xt1uec-unsplash.jpg'
+        'contact-bg': 'images/IMG_3566.JPG'
     };
     
     // Apply background images to each section
