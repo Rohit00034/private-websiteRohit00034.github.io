@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set background images for each page
     const backgroundImages = {
         'cover-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
-        'intro-bg': 'images/intro-background.jpg',
-        'about-bg': 'images/about-background.jpg',
-        'contents-bg': 'images/contents-background.jpg',
-        'sections-bg': 'images/sections-background.jpg',
-        'contact-bg': 'images/contact-background.jpg'
+        'intro-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'about-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'contents-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'sections-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg',
+        'contact-bg': 'images/ryan-kim-ADvoB9pDkow-unsplash.jpg'
     };
     
     // Apply background images to each section
